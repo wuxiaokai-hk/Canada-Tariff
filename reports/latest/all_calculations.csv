@@ -1,0 +1,37 @@
+section,step,value,formula,worked,fmt
+1. DataWeb 2025,U.S. imports from Canada (customs value),382040199761.0,sum(customs_value over all HTS10),"20,131 HTS10 lines = US$382.04bn",usd
+1. DataWeb 2025,Calculated duty,9986118143.0,sum(calc_duty),US$9.99bn,usd
+1. DataWeb 2025,Dutiable value,55685780000.0,sum(dutiable_value),US$55.69bn,usd
+1. DataWeb 2025,"Realized effective rate, 2025",0.026138919802804004,calc_duty / customs_value,US$9.99bn / US$382.04bn = 2.61%,pct
+1. DataWeb 2025,Check: 12 monthly totals = annual HTS10 total,1.0,sum(monthly 2025 value) / sum(HTS10 value),US$382.04bn / US$382.04bn = 1.0000,ratio
+1. DataWeb 2025,"USMCA (CUSMA) claim share, all goods",0.7508474500679576,USMCA value / all value,US$286.85bn / US$382.04bn = 75.1%,pct
+1. DataWeb 2025,"USMCA claim share, HS 8708 auto parts",0.8079926710395968,USMCA value / all value (8708),US$8.70bn / US$10.76bn = 80.8%,pct
+1. DataWeb 2025,"USMCA claim share, HS 8703 cars",0.9898222858748139,USMCA value / all value (8703),US$24.85bn / US$25.11bn = 99.0%,pct
+2. New HTS codes,Lines under the 50% tariff now / banned lines,659.0,count of annex lines,"659 tariffed lines, 68 banned lines; 76 lines had no 2025 imports",int
+2. New HTS codes,Value under Section 338 now (net of carve-outs),20259647680.0,"sum(sign x value), sign = +1 listed, -1 carve-out",July-annex lines US$19.28bn + Sep 15 additions US$1.85bn - carve-outs = US$20.26bn,usd
+2. New HTS codes,Check: exact coverage / official US$20bn,1.012982384,coverage / 20e9,US$20.26bn / US$20.00bn = 1.013,ratio
+2. New HTS codes,Value of banned lines (from Sep 29),967320016.0,sum(value of banned lines),US$0.97bn vs CRS about US$0.97bn (ratio 1.000),usd
+2. New HTS codes,Value of lines removed on Sep 15,876337148.0,sum(value of removed lines),US$0.88bn,usd
+2. New HTS codes,"Realized duty already paid on tariffed lines, 2025",0.025145130016397205,sum(sign x duty) / coverage,US$0.51bn / US$20.26bn = 2.51%,pct
+3. Calculated tariff rate,"Realized base rate (2026-07, before Section 338)",0.028224583109914953,duty / value in base month,US$0.95bn / US$33.49bn = 2.82%,pct
+3. Calculated tariff rate,Covered share of all imports,0.053030146284799885,coverage / total imports,US$20.26bn / US$382.04bn = 5.30%,pct
+3. Calculated tariff rate,Section 338 increment,0.026515073142399943,covered share x 50%,5.30% x 50% = 2.65%,pct
+3. Calculated tariff rate,"CURRENT RATE, realized",0.054739656252314896,base_realized + 50% x coverage / total,2.82% + 50% x US$20.26bn / US$382.04bn = 5.47%,pct
+3. Calculated tariff rate,"CURRENT RATE, statutory",0.07651507314239994,base_statutory + 50% x coverage / total,5.00% + 50% x US$20.26bn / US$382.04bn = 7.65%,pct
+3. Calculated tariff rate,Check: August 2026 realized vs 10/31 of the month under Section 338,0.03180858929334097,realized Aug rate vs base + increment x 10/31,realized 3.18% vs implied 3.68% (gap = front-loading / trade shifts),pct
+3. Calculated tariff rate,Reconciliation: earlier HS6-based statutory estimate,0.0848023782060573,base_statutory + 50% x HS6 value / total,5.00% + 50% x US$26.59bn / US$382.04bn = 8.48% (HS6 codes include unlisted 8-digit lines),pct
+4. Scenario A,Added duty from this scenario's components,3882298634.375,sum(value x share x (after - now)),US$31.06bn x 50% x (50% - 25%) = US$3.88bn,usd
+4. Scenario A,Increment over the previous scenario (realized),0.010162016030783467,added duty / total imports,US$3.88bn / US$382.04bn = 1.02%,pct
+4. Scenario A,"AVERAGE RATE, SCENARIO A (realized)",0.06490167228309836,current + cumulative increments,5.47% + 1.02% = 6.49%,pct
+4. Scenario A,"AVERAGE RATE, SCENARIO A (statutory)",0.09683910520396688,current + cumulative increments,7.65% + 2.03% = 9.68%,pct
+4. Scenario B,Added duty from this scenario's components,4864694892.75,sum(value x share x (after - now)),US$4.35bn + US$0.52bn = US$4.86bn,usd
+4. Scenario B,Increment over the previous scenario (realized),0.012733463378443676,added duty / total imports,US$4.86bn / US$382.04bn = 1.27%,pct
+4. Scenario B,"AVERAGE RATE, SCENARIO B (realized)",0.07763513566154204,current + cumulative increments,5.47% + 2.29% = 7.76%,pct
+4. Scenario B,"AVERAGE RATE, SCENARIO B (statutory)",0.11092485188027605,current + cumulative increments,7.65% + 3.44% = 11.09%,pct
+4. Scenario C,Added duty from this scenario's components,897394492.0,sum(value x share x (after - now)),US$3.59bn x 100% x (50% - 25%) = US$0.90bn,usd
+4. Scenario C,Increment over the previous scenario (realized),0.002348953048818946,added duty / total imports,US$0.90bn / US$382.04bn = 0.23%,pct
+4. Scenario C,"AVERAGE RATE, SCENARIO C (realized)",0.07998408871036099,current + cumulative increments,5.47% + 2.52% = 8.00%,pct
+4. Scenario C,"AVERAGE RATE, SCENARIO C (statutory)",0.113273804929095,current + cumulative increments,7.65% + 3.68% = 11.33%,pct
+5. Probabilities,P(any Jan 2027 increase in force by end-Q1 2027),0.3,input,"Split given an increase: A 40%, B 40%, C 20%",pct
+5. Probabilities,PROBABILITY-WEIGHTED RATE (realized),0.06022122165259893,sum(probability x rate),70% x 5.47% + 12% x 6.49% + 12% x 7.76% + 6% x 8.00% = 6.02%,pct
+5. Probabilities,PROBABILITY-WEIGHTED RATE (statutory),0.0852886543455348,sum(probability x rate),70% x 7.65% + 12% x 9.68% + 12% x 11.09% + 6% x 11.33% = 8.53%,pct

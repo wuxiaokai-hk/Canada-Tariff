@@ -1,0 +1,138 @@
+Downloading from USITC DataWeb (about 15-20 minutes because of the rate limit)...
+  chapter 01: 78 lines so far
+  chapter 02: 241 lines so far
+  chapter 03: 805 lines so far
+  chapter 04: 1,077 lines so far
+  chapter 05: 1,115 lines so far
+  chapter 06: 1,193 lines so far
+  chapter 07: 1,611 lines so far
+  chapter 08: 1,845 lines so far
+  chapter 09: 1,944 lines so far
+  chapter 10: 2,010 lines so far
+  chapter 11: 2,060 lines so far
+  chapter 12: 2,224 lines so far
+  chapter 13: 2,247 lines so far
+  chapter 14: 2,261 lines so far
+  chapter 15: 2,371 lines so far
+  chapter 16: 2,550 lines so far
+  chapter 17: 2,641 lines so far
+  chapter 18: 2,724 lines so far
+  chapter 19: 2,830 lines so far
+  chapter 20: 3,107 lines so far
+  chapter 21: 3,223 lines so far
+  chapter 22: 3,342 lines so far
+  chapter 23: 3,403 lines so far
+  chapter 24: 3,604 lines so far
+  chapter 25: 3,705 lines so far
+  chapter 26: 3,807 lines so far
+  chapter 27: 3,949 lines so far
+  chapter 28: 4,291 lines so far
+  chapter 29: 5,504 lines so far
+  chapter 30: 5,648 lines so far
+  chapter 31: 5,677 lines so far
+  chapter 32: 5,845 lines so far
+  chapter 33: 5,919 lines so far
+  chapter 34: 5,967 lines so far
+  chapter 35: 5,997 lines so far
+  chapter 36: 6,018 lines so far
+  chapter 37: 6,079 lines so far
+  chapter 38: 6,291 lines so far
+  chapter 39: 6,609 lines so far
+  chapter 40: 6,809 lines so far
+  chapter 41: 6,985 lines so far
+  chapter 42: 7,106 lines so far
+  chapter 43: 7,145 lines so far
+  chapter 44: 7,705 lines so far
+  chapter 45: 7,724 lines so far
+  chapter 46: 7,773 lines so far
+  chapter 47: 7,799 lines so far
+  chapter 48: 8,111 lines so far
+  chapter 49: 8,161 lines so far
+  chapter 50: 8,191 lines so far
+  chapter 51: 8,315 lines so far
+  chapter 52: 8,840 lines so far
+  chapter 53: 8,902 lines so far
+  chapter 54: 9,168 lines so far
+  chapter 55: 9,567 lines so far
+  chapter 56: 9,648 lines so far
+  chapter 57: 9,722 lines so far
+  chapter 58: 9,833 lines so far
+  chapter 59: 9,908 lines so far
+  chapter 60: 10,014 lines so far
+    rate-limited, waiting 60s
+  chapter 61: 10,852 lines so far
+  chapter 62: 12,099 lines so far
+  chapter 63: 12,328 lines so far
+  chapter 64: 12,719 lines so far
+  chapter 65: 12,783 lines so far
+    rate-limited, waiting 60s
+  chapter 66: 12,791 lines so far
+  chapter 67: 12,804 lines so far
+  chapter 68: 12,901 lines so far
+  chapter 69: 13,021 lines so far
+  chapter 70: 13,305 lines so far
+    rate-limited, waiting 60s
+  chapter 71: 13,445 lines so far
+  chapter 72: 14,006 lines so far
+  chapter 73: 14,584 lines so far
+  chapter 74: 14,720 lines so far
+  chapter 75: 14,749 lines so far
+    rate-limited, waiting 60s
+  chapter 76: 14,874 lines so far
+  chapter 78: 14,887 lines so far
+  chapter 79: 14,900 lines so far
+  chapter 80: 14,913 lines so far
+  chapter 81: 14,997 lines so far
+    rate-limited, waiting 60s
+  chapter 82: 15,186 lines so far
+  chapter 83: 15,274 lines so far
+  chapter 84: 16,976 lines so far
+  chapter 85: 17,972 lines so far
+  chapter 86: 18,010 lines so far
+    rate-limited, waiting 60s
+  chapter 87: 18,409 lines so far
+  chapter 88: 18,476 lines so far
+  chapter 89: 18,534 lines so far
+  chapter 90: 18,956 lines so far
+  chapter 91: 19,331 lines so far
+    rate-limited, waiting 60s
+  chapter 92: 19,394 lines so far
+  chapter 93: 19,461 lines so far
+  chapter 94: 19,735 lines so far
+  chapter 95: 19,853 lines so far
+  chapter 96: 20,010 lines so far
+    rate-limited, waiting 60s
+  chapter 97: 20,040 lines so far
+  chapter 98: 20,129 lines so far
+  chapter 99: 20,131 lines so far
+Download complete.
+New data in place; previous files archived in /Users/wuxiaokai/Downloads/tariff_project/data/archive/2026-11-02_2252
+
+U.S. effective tariff rate on Canadian goods
+------------------------------------------------------------------------------
+Outcome                                              Realized Statutory   Prob
+Today (Section 338 in force)                            5.47%     7.65%    70%
+Scenario A: Cars and trucks to 50%; CUSMA parts sta     6.49%     9.68%    12%
+Scenario B: A + auto parts to 50% (CUSMA parts exem     7.76%    11.09%    12%
+Scenario C: B + steel derivatives to 50% (full Aug      8.00%    11.33%     6%
+Probability-weighted                                    6.02%     8.53%
+------------------------------------------------------------------------------
+2025 realized rate: US$9.99bn / US$382.04bn = 2.61%
+Section 338 coverage (exact HTS): US$20.26bn; banned: US$0.97bn
+  Moody's S1       ( 10%) -> No January increase                      5.47% / 7.65%
+  Moody's Baseline ( 50%) -> No January increase                      5.47% / 7.65%
+  Moody's S2       ( 75%) -> Scenario A: Cars and trucks to 50%; CUSM 6.49% / 9.68%
+  Moody's S3       ( 90%) -> Scenario B: A + auto parts to 50% (CUSMA 7.76% / 11.09%
+  Moody's S4       ( 96%) -> Scenario C: B + steel derivatives to 50% 8.00% / 11.33%
+saved /Users/wuxiaokai/Downloads/tariff_project/reports/2026-11-02/Canada_US_Tariff_Scenarios_2026.xlsx hts10 rows 20131 annex lines 675
+
+Reports written to /Users/wuxiaokai/Downloads/tariff_project/reports/2026-11-02 (also copied to /Users/wuxiaokai/Downloads/tariff_project/reports/latest):
+   CMA_RESULTS.md
+   Canada_US_Tariff_Scenarios_2026.xlsx
+   Ontario_CMA_Tariff_Results.xlsx
+   RESULTS.md
+   RUN_LOG.txt
+   all_calculations.csv
+   cma_results_detail.xlsx
+   matched_hts_lines.csv
+   tariff_results.xlsx

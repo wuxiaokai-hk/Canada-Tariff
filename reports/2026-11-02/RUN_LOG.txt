@@ -1,0 +1,9 @@
+Run 2026-11-02 23:01
+DataWeb data pulled: November 02, 2026; latest month 2026-08; 20131 HTS10 lines
+StatCan data pulled: October 15, 2026
+2025 realized rate 2.61%; today 5.47% realized / 7.65% statutory
+Scenario A: 6.49% / 9.68% (p = 12%)
+Scenario B: 7.76% / 11.09% (p = 12%)
+Scenario C: 8.00% / 11.33% (p = 6%)
+Probability-weighted: 6.02% / 8.53%
+Data checks: all passed
