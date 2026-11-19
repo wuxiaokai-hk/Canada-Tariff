@@ -3,7 +3,7 @@
 One command takes the project from downloading the data to the final reports:
 
 - the U.S. effective tariff rate on Canadian goods;
-- the January 2027 threat scenarios, with probabilities and the Moody's mapping;
+- the January 2027 threat scenarios, with probabilities and their mapping to a standard percentile scenario set (Baseline, S1-S4);
 - a check of the 2.6% realized rate;
 - the impact on each Ontario CMA.
 
@@ -103,3 +103,7 @@ reports/<date>/         one folder per run; reports/latest/ = most recent
 - **Census quirks:** the 2021 Census counts workers where they live. GM Oshawa reopened after the Census.
 - **January 2027 threat:** posted on August 24, 2026, but not proclaimed as of the latest update.
 - **Downloaders:** the DataWeb downloader follows the request format the DataWeb site uses. The StatCan downloader was checked offline against the real table structure. Both have run only partly against the live sites, so check `RUN_LOG.txt` after your first download.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Free to use, change and share. Data downloaded from public sources stay under their providers' terms. Independent open-source project, not affiliated with or endorsed by any employer, regulator or data vendor.

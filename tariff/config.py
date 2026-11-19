@@ -27,7 +27,8 @@ CONDITIONAL_SPLIT = {            # given that some increase happens
     "B": 0.40,                   # vehicles + parts
     "C": 0.20,                   # vehicles + parts + steel derivatives (full threat)
 }
-MOODYS_PERCENTILES = {"Baseline": 0.50, "S1": 0.10, "S2": 0.75, "S3": 0.90, "S4": 0.96}
+# Percentile of each scenario in a standard percentile-based scenario set (edit to match your provider)
+SCENARIO_PERCENTILES = {"Baseline": 0.50, "S1": 0.10, "S2": 0.75, "S3": 0.90, "S4": 0.96}
 
 PROBABILITY_EVIDENCE = [
     ("Kalshi (Oct 12, 2026)", "Canada accepts a U.S. trade deal before Jan 1, 2027", 0.30,

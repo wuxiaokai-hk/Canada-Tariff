@@ -34,8 +34,8 @@ def write_markdown(R, path):
     L.append("Realized = duties actually collected / import value (what Census, USAFacts and RBC measure). "
              "Statutory = headline rates applied to all trade (what the Bank of Canada and Global Trade Alert use).\n")
 
-    L.append("## Moody's mapping\n")
-    L.append(_md_table(T["moodys_mapping"], ["moodys", "percentile", "outcome", "rate_realized", "rate_statutory"],
+    L.append("## Scenario mapping\n")
+    L.append(_md_table(T["scenario_mapping"], ["scenario", "percentile", "outcome", "rate_realized", "rate_statutory"],
                        {"percentile": "pct", "rate_realized": "pct", "rate_statutory": "pct"}))
 
     L.append("\n## Does the 2.6% hold up?\n")
@@ -83,7 +83,7 @@ def write_excel(R, path):
                             [{"outcome": "Probability-weighted", "rate_realized": S["w_r"], "rate_statutory": S["w_s"], "probability": 1.0}])
         sheets = [("Summary", summ), ("All calculations", T["steps"]), ("DataWeb monthly", T["monthly"]),
                   ("New HTS codes", T["annex"]), ("Scenario components", T["scenario_components"]),
-                  ("Probabilities", T["probabilities"]), ("Moodys mapping", T["moodys_mapping"]),
+                  ("Probabilities", T["probabilities"]), ("Scenario mapping", T["scenario_mapping"]),
                   ("Evidence", T["evidence"]), ("Verify 2.6%", T["verification"]), ("Sensitivity", T["sensitivity"])]
         for name, df in sheets:
             df.to_excel(xw, sheet_name=name, index=False)
@@ -122,8 +122,8 @@ def print_summary(R):
     print("-" * 78)
     print(f"2025 realized rate: {bn(S['duty'])} / {bn(S['total'])} = {pct(S['rate25'])}")
     print(f"Section 338 coverage (exact HTS): {bn(S['coverage'])}; banned: {bn(S['banned'])}")
-    for _, r in R["tables"]["moodys_mapping"].iterrows():
-        print(f"  Moody's {r['moodys']:<9}({pct(r['percentile'], 0):>4}) -> {r['outcome'][:40]:<40} {pct(r['rate_realized'])} / {pct(r['rate_statutory'])}")
+    for _, r in R["tables"]["scenario_mapping"].iterrows():
+        print(f"  Scenario {r["scenario"]:<9}({pct(r['percentile'], 0):>4}) -> {r['outcome'][:40]:<40} {pct(r['rate_realized'])} / {pct(r['rate_statutory'])}")
 
 
 # ---------------------------------------------------------------- CMA results

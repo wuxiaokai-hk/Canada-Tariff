@@ -224,10 +224,10 @@ def run(data_dir):
     step("5. Probabilities", "PROBABILITY-WEIGHTED RATE (statutory)", w_s, "sum(probability x rate)",
          " + ".join(f"{pct(a, 0)} x {pct(b)}" for a, b in zip(prob["probability"], prob["rate_statutory"])) + f" = {pct(w_s)}")
     mp = []
-    for name, pc in sorted(C.MOODYS_PERCENTILES.items(), key=lambda x: x[1]):
+    for name, pc in sorted(C.SCENARIO_PERCENTILES.items(), key=lambda x: x[1]):
         row = prob[prob["cumulative"] >= pc - 1e-12].iloc[0]
-        mp.append({"moodys": name, "percentile": pc, "outcome": row["outcome"], "rate_realized": row["rate_realized"], "rate_statutory": row["rate_statutory"]})
-    R["tables"]["moodys_mapping"] = pd.DataFrame(mp)
+        mp.append({"scenario": name, "percentile": pc, "outcome": row["outcome"], "rate_realized": row["rate_realized"], "rate_statutory": row["rate_statutory"]})
+    R["tables"]["scenario_mapping"] = pd.DataFrame(mp)
     R["tables"]["evidence"] = pd.DataFrame(C.PROBABILITY_EVIDENCE, columns=["source", "finding", "reading", "how_used"])
 
     # 6. Verification of the 2.6%

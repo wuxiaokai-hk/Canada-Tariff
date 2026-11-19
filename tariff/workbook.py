@@ -120,14 +120,14 @@ def build(data_dir, out_path):
         ("3. Calculated tariff rate: the current trade-weighted effective rate = realized pre-Section-338 rate (DataWeb) + Section 338 increment on covered HTS lines.", F),
         ("4-6. Scenario A, B, C: the average (trade-weighted) effective rate if the January 1, 2027 threats are implemented. Each scenario adds to the one before.", F),
         ("     A = cars, trucks and tractors to 50% (CUSMA parts stay exempt). B = A + auto parts to 50% (CUSMA parts exemption removed). C = B + steel derivatives to 50% (the full August 24 threat).", F),
-        ("7. Scenario probabilities: probability of each outcome by end-Q1 2027, the evidence behind it, the probability-weighted rate, and how A/B/C map to Moody's S3 and S4.", F),
+        ("7. Scenario probabilities: probability of each outcome by end-Q1 2027, the evidence behind it, the probability-weighted rate, and how A/B/C map to the S3 and S4 scenarios of a standard percentile scenario set.", F),
         ("8. Verify 2.6%: the 2025 realized rate of 2.61% checked against USAFacts, RBC, Wharton, Bank of Canada, Global Trade Alert and monthly DataWeb figures.", F),
         ("9. HS6 values: 2025 import values by 6-digit HS code (UN Comtrade), used as a fallback when line-level HTS10 data is not loaded.", F),
         ("10. Sources.", F),
         ("", F),
         ("Two ways to measure the rate", FB),
         ("Realized (central): calculated duties / customs value, as Census/DataWeb record them. Captures CUSMA-exempt trade (75% of 2025 value) and is what USAFacts and RBC publish. This is the basis for the scenario rates.", F),
-        ("Statutory (upper bound): applies headline rates to full trade values, as the Bank of Canada (5.0%) and Global Trade Alert (8.5%) do. Shown alongside for comparison with Moody's and other published assumptions.", F),
+        ("Statutory (upper bound): applies headline rates to full trade values, as the Bank of Canada (5.0%) and Global Trade Alert (8.5%) do. Shown alongside for comparison with scenario-vendor and other published assumptions.", F),
         ("", F),
         ("Conventions", FB),
         ("Every number is a live Excel formula. On 'Calculated tariff rate' and the Scenario tabs, extra columns print each formula as text and show the same calculation with the numbers plugged in (e.g. 5.00% + 50% x US$xx.xxbn / US$382.04bn).", F),
@@ -495,9 +495,9 @@ def build(data_dir, out_path):
     put(P, 12, 1, "P(any January 2027 increase in force by end-Q1 2027)", FB); put(P, 12, 2, C.P_ANY_INCREASE, FBLUE, PCT, YFILL)
     put(P, 12, 8, "Central 30%. Range 20%-40% (see evidence). Test sensitivity here.", F, wrap=True)
 
-    put(P, 14, 1, "Mapping to Moody's scenarios (from the cumulative distribution)", FB)
-    header(P, 15, ["Moody's scenario", "Percentile", "Outcome at that percentile", "Rate, realized", "Rate, statutory", "", "", "Reading"], freeze=False)
-    mp = sorted([(k, v) for k, v in C.MOODYS_PERCENTILES.items() if k != "S1"], key=lambda x: x[1])
+    put(P, 14, 1, "Mapping to a standard percentile scenario set (Baseline, S1-S4) (from the cumulative distribution)", FB)
+    header(P, 15, ["Scenario", "Percentile", "Outcome at that percentile", "Rate, realized", "Rate, statutory", "", "", "Reading"], freeze=False)
+    mp = sorted([(k, v) for k, v in C.SCENARIO_PERCENTILES.items() if k != "S1"], key=lambda x: x[1])
     for i, (nm, pc) in enumerate(mp, 16):
         put(P, i, 1, nm); put(P, i, 2, pc, F, '0%')
         put(P, i, 3, f"=INDEX($A$5:$A$8,MATCH(TRUE,INDEX($F$5:$F$8>=B{i},0),0))")
@@ -546,7 +546,7 @@ def build(data_dir, out_path):
            "2. Energy (about a quarter of imports) carries low or no duty, pulling the realized average down.",
            "3. Section 232 on CUSMA vehicles applies only to non-U.S. content, so duty paid per dollar of vehicle is about half the headline rate.",
            "4. Trade shifts away from tariffed goods (lower weight on high-duty lines) after tariffs take effect.",
-           "Implication for Moody's: calibrate scenario tariff inputs on the realized basis if the model's tariff variable is 'duties collected / imports'; use the statutory column if it represents headline rates."]
+           "Implication for macro scenario models: calibrate scenario tariff inputs on the realized basis if the model's tariff variable is 'duties collected / imports'; use the statutory column if it represents headline rates."]
     for k, t in enumerate(why, nv + 1):
         c = put(V, k, 1, t); c.alignment = Alignment(wrap_text=False)
 

@@ -14,9 +14,9 @@ Computed in Python from USITC DataWeb HTS10 data (U.S. imports from Canada, 2025
 
 Realized = duties actually collected / import value (what Census, USAFacts and RBC measure). Statutory = headline rates applied to all trade (what the Bank of Canada and Global Trade Alert use).
 
-## Moody's mapping
+## Scenario mapping
 
-| moodys | percentile | outcome | rate_realized | rate_statutory |
+| scenario | percentile | outcome | rate_realized | rate_statutory |
 |---|---|---|---|---|
 | S1 | 10.00% | No January increase | 5.47% | 7.65% |
 | Baseline | 50.00% | No January increase | 5.47% | 7.65% |
